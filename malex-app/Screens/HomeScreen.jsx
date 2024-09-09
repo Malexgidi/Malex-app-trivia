@@ -1,201 +1,254 @@
+
 import React from "react";
-import {Image, StyleSheet, Text, View, TouchableOpacity} from "react-native";
+import { Image, StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
-
-
-
-const HomeScreen = ({navigation}) => {
-  
-
-  	return (
-    		<View style={styles.homeScreenjoinGame}>
-      			<View style={styles.image6Parent}>
-    				<Image style={[styles.image6Icon, styles.gamePosition]} resizeMode="cover" source={require('../assets/images/image6.png')} />
-        				<View style={styles.frameParent}>
-          					<View style={styles.helloJohnParent}>
-            						<Text style={[styles.helloJohn, styles.homeTypo]}>Hello John</Text>
-    						<Image style={styles.twemojiwavingHandIcon} resizeMode="cover" source={require('../assets/images/twemojiwavinghand.png')}  />
-          					</View>
-          					<Text style={[styles.letsPlayAnd, styles.letsPlayAndTypo]}>Let’s play and Earn</Text>
-        				</View>
-        				<View style={[styles.ellipseParent, styles.groupChildLayout]}>
-      					<Image style={[styles.groupChild, styles.groupChildLayout]} resizeMode="cover" source={require('../assets/images/Ellipse2.png' )}   />
-  					<Image style={[styles.icon, styles.iconLayout1]} resizeMode="cover" source={require('../assets/images/108.png' )}  />
-        				</View>
-        				
-        				<View style={[styles.frameWrapper, styles.wrapperLayout]}>
-          					<View style={[styles.parent, styles.text8Position]}>
-            						<Text style={[styles.text1, styles.textTypo1]}>
-              							<Text style={styles.joe1Typo}>₦</Text>
-              							<Text style={[styles.text3, styles.textTypo]}>5,000.00</Text>
-            						</Text>
-    						<Image style={styles.icons8plus} resizeMode="cover" source={require('../assets/images/icons8plus.png' )}  />
-          					</View>
-        				</View>
-        				<View style={styles.frameContainer}>
-          					<View style={styles.fluenteraserSmall20RegularParent}>
-        						<Image style={styles.icons8plus} resizeMode="cover" source={require('../assets/images/fluenterasersmall20regular.png' )} />
-            						<Text style={[styles.text4, styles.text4Typo]}>0</Text>
-          					</View>
-        				</View>
-				<Image style={[styles.vuesaxlinearnotificationIcon, styles.iconLayout3]} resizeMode="cover" source={require('../assets/images/notification.png')} />
-      			</View>
-      			<View style={[styles.groupParent, styles.frameGroupLayout]}>
-    				<Image style={styles.frameChild} resizeMode="cover" source={require('../assets/images/Group1000004131.png')} />
-        				<View style={[styles.frameItem, styles.frameGroupLayout]} />
-                        <View >
-              <TouchableOpacity
-        style={[styles.joinGameWrapper, styles.wrapperBorder]}
-        onPress={() => navigation.navigate('GameScreen')}
-                 >
-        <Text style={[styles.joinGame, styles.text9Layout]}>Join Game</Text>
-      </TouchableOpacity>
+const HomeScreen = ({ navigation }) => {
+  return (
+    <View style={styles.homeScreenjoinGame}>
+      <View style={styles.image6Parent}>
+        <Image
+          style={[styles.image6Icon, styles.gamePosition]}
+          resizeMode="cover"
+          source={require("../assets/images/image6.png")}
+        />
+        <View style={styles.frameParent}>
+          <View style={styles.helloJohnParent}>
+            <Text style={[styles.helloJohn, styles.homeTypo]}>Hello John</Text>
+            <Image
+              style={styles.twemojiwavingHandIcon}
+              resizeMode="cover"
+              source={require("../assets/images/twemojiwavinghand.png")}
+            />
+          </View>
+          <Text style={[styles.letsPlayAnd, styles.letsPlayAndTypo]}>
+            Let’s play and Earn
+          </Text>
+        </View>
+        <View style={[styles.ellipseParent, styles.groupChildLayout]}>
+          <Image
+            style={[styles.groupChild, styles.groupChildLayout]}
+            resizeMode="cover"
+            source={require("../assets/images/Ellipse2.png")}
+          />
+          <Image
+            style={[styles.icon, styles.iconLayout1]}
+            resizeMode="cover"
+            source={require("../assets/images/108.png")}
+          />
+        </View>
+        <View style={[styles.frameWrapper, styles.wrapperLayout]}>
+          <View style={[styles.parent, styles.text8Position]}>
+            <Text style={[styles.text1, styles.textTypo1]}>
+              <Text style={styles.joe1Typo}>₦</Text>
+              <Text style={[styles.text3, styles.textTypo]}>5,000.00</Text>
+            </Text>
+            <Image
+              style={styles.icons8plus}
+              resizeMode="cover"
+              source={require("../assets/images/icons8plus.png")}
+            />
+          </View>
+        </View>
+        <View style={styles.frameContainer}>
+          <View style={styles.fluenteraserSmall20RegularParent}>
+            <Image
+              style={styles.icons8plus}
+              resizeMode="cover"
+              source={require("../assets/images/fluenterasersmall20regular.png")}
+            />
+            <Text style={[styles.text4, styles.text4Typo]}>0</Text>
+          </View>
+        </View>
+        <Image
+          style={[styles.vuesaxlinearnotificationIcon, styles.iconLayout3]}
+          resizeMode="cover"
+          source={require("../assets/images/notification.png")}
+        />
+      </View>
+      <View style={[styles.groupParent, styles.frameGroupLayout]}>
+        <Image
+          style={styles.frameChild}
+          resizeMode="cover"
+          source={require("../assets/images/Group1000004131.png")}
+        />
+        <View style={[styles.frameItem, styles.frameGroupLayout]} />
+        <View>
+          <TouchableOpacity
+            style={[styles.joinGameWrapper, styles.wrapperBorder]}
+            onPress={() => navigation.navigate("GameScreen")}
+          >
+            <Text style={[styles.joinGame, styles.text9Layout]}>Join Game</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.entryFeeParent}>
+          <Text style={[styles.entryFee, styles.joe1Typo]}>Entry Fee</Text>
+          <View style={styles.group}>
+            <Text style={[styles.text5, styles.textTypo]}>₦</Text>
+            <Text style={[styles.text6, styles.textTypo]}>100.00</Text>
+          </View>
+        </View>
+        <View style={[styles.container, styles.text7Position]}>
+          <Text style={[styles.gamePrize, styles.homeTypo]}>Game Prize</Text>
+          <Text style={[styles.text7, styles.text7Position]}>₦1,000,000</Text>
+          <Text style={[styles.gamePrize, styles.homeTypo]}>Game Prize</Text>
+        </View>
+        <Text style={[styles.nextGameTomorrow, styles.textTypo]}>
+          Next Game: Tomorrow, 8PM
+        </Text>
+        <View style={[styles.wrapper, styles.wrapperShadowBox]}>
+          <Text style={[styles.text8, styles.textTypo]}>?</Text>
+        </View>
+      </View>
+      <View style={[styles.frameGroup, styles.frameGroupLayout]}>
+        <View style={styles.frameView}>
+          <View style={styles.frameParent1}>
+            <View>
+              <View style={styles.frameParent2}>
+                <View style={styles.referEarnWithYourFriendsWrapper}>
+                  <Text style={[styles.referEarn, styles.joe1Typo]}>
+                    Refer & Earn with your Friends
+                  </Text>
+                </View>
+                <Text style={[styles.shareWithYour, styles.shareWithYourClr]}>
+                  Share with your friends and loved ones to come and play
+                </Text>
+              </View>
+            </View>
+            <View style={[styles.inviteFriendsWrapper, styles.wrapperBorder]}>
+              <Text style={[styles.inviteFriends, styles.shareWithYourClr]}>
+                Invite Friends
+              </Text>
+            </View>
+          </View>
+        </View>
+        <Image
+          style={styles.materialSymbolsshareIcon}
+          resizeMode="cover"
+          source={require("../assets/images/materialsymbolsshare.png")}
+        />
+      </View>
+      <View style={styles.topGamersOfTheDayParent}>
+        <Text style={[styles.topGamersOf, styles.joe1Typo]}>
+          Top Gamers of the Day
+        </Text>
+        <View style={styles.joeParent}>
+          {/* Top Gamer 1 */}
+          <View style={styles.joe}>
+            <View style={styles.groupLayout}>
+              <Image
+                style={[styles.groupItem, styles.groupLayout]}
+                resizeMode="cover"
+                source={require("../assets/images/Ellipse252.png")}
+              />
+              <Image
+                style={[styles.icon1, styles.iconLayout1]}
+                resizeMode="cover"
+                source={require("../assets/images/5811.png")}
+              />
+            </View>
+            <View style={styles.joeGroup}>
+              <Text style={[styles.joe1, styles.joe1Typo]}>Joe</Text>
+              <View style={styles.frame}>
+                <Text style={[styles.text9, styles.text9Layout]}>
+                  <Text style={styles.joe1Typo}>₦</Text>
+                  <Text style={styles.text11}>5,000</Text>
+                </Text>
+              </View>
+            </View>
+          </View>
+          {/* Top Gamer 2 */}
+          <View style={styles.joe}>
+            <View style={styles.groupLayout}>
+              <Image
+                style={[styles.groupItem, styles.groupLayout]}
+                resizeMode="cover"
+                source={require("../assets/images/Ellipse2522.png")}
+              />
+              <Image
+                style={[styles.icon1, styles.iconLayout1]}
+                resizeMode="cover"
+                source={require("../assets/images/291.png")}
+              />
+            </View>
+            <View style={styles.joeGroup}>
+              <Text style={[styles.joe1, styles.joe1Typo]}>Sarah</Text>
+              <View style={styles.frame}>
+                <Text style={[styles.text9, styles.text9Layout]}>
+                  <Text style={styles.joe1Typo}>₦</Text>
+                  <Text style={styles.text11}>5,000</Text>
+                </Text>
+              </View>
+            </View>
+          </View>
+          {/* Top Gamer 3 */}
+          <View style={styles.joe}>
+            <View style={styles.groupLayout}>
+              <Image
+                style={[styles.groupItem, styles.groupLayout]}
+                resizeMode="cover"
+                source={require("../assets/images/Ellipse2523.png")}
+              />
+              <Image
+                style={[styles.icon1, styles.iconLayout1]}
+                resizeMode="cover"
+                source={require("../assets/images/2929.png")}
+              />
+            </View>
+            <View style={styles.joeGroup}>
+              <Text style={[styles.joe1, styles.joe1Typo]}>Hanax</Text>
+              <View style={styles.frame}>
+                <Text style={[styles.text9, styles.text9Layout]}>
+                  <Text style={styles.joe1Typo}>₦</Text>
+                  <Text style={styles.text11}>5,000</Text>
+                </Text>
+              </View>
+            </View>
+          </View>
+          {/* Repeat similar blocks for other top gamers */}
+        </View>
+      </View>
+      <View style={[styles.component1, styles.barsPosition]}>
+        <Image
+          style={styles.subtractIcon}
+          resizeMode="cover"
+          source={require("../assets/images/Subtract.png")}
+        />
+        <View style={styles.groupContainer}>
+          <Image
+            style={styles.frameInner}
+            resizeMode="cover"
+            source={require("../assets/images/Group1000004150.png")}
+          />
+          <Text style={[styles.home, styles.homeTypo]}>Home</Text>
+        </View>
+        <View style={styles.vuesaxlinearemptyWalletParent}>
+          <Image
+            style={styles.iconLayout}
+            resizeMode="cover"
+            source={require("../assets/images/emptywallet.png")}
+          />
+          <Text style={[styles.wallet, styles.text4Typo]}>Wallet</Text>
+        </View>
+        <View style={styles.streamlinestore1Parent}>
+          <Image
+            style={styles.streamlinestore1Icon}
+            resizeMode="cover"
+            source={require("../assets/images/store.png")}
+          />
+          <Text style={[styles.store, styles.textTypo]}>Store</Text>
+        </View>
+        <View style={styles.bars}>
+          <Image
+            style={styles.barsIcon}
+            resizeMode="cover"
+            source={require("../assets/images/bars.png")}
+          />
+        </View>
+      </View>
     </View>
-        				<View style={styles.entryFeeParent}>
-          					<Text style={[styles.entryFee, styles.joe1Typo]}>Entry Fee</Text>
-          					<View style={styles.group}>
-            						<Text style={[styles.text5, styles.textTypo]}>₦</Text>
-            						<Text style={[styles.text6, styles.textTypo]}>100.00</Text>
-          					</View>
-        				</View>
-        				<View style={[styles.container, styles.text7Position]}>
-                    <Text style={[styles.gamePrize, styles.homeTypo]}>Game Prize</Text>
-          					<Text style={[styles.text7, styles.text7Position]}>₦1,000,000</Text>
-          					<Text style={[styles.gamePrize, styles.homeTypo]}>Game Prize</Text>
-        				</View>
-        				<Text style={[styles.nextGameTomorrow, styles.textTypo]}>Next Game: Tomorrow, 8PM </Text>
-        				<View style={[styles.wrapper, styles.wrapperShadowBox]}>
-          					<Text style={[styles.text8, styles.textTypo]}>?</Text>
-            						</View>
-            						</View>
-            						<View style={[styles.frameGroup, styles.frameGroupLayout]}>
-              							<View style={styles.frameView}>
-                								<View style={styles.frameParent1}>
-                  									<View>
-                    										<View style={styles.frameParent2}>
-                      											<View style={styles.referEarnWithYourFriendsWrapper}>
-                        												<Text style={[styles.referEarn, styles.joe1Typo]}>Refer & Earn with your Friends</Text>
-                      											</View>
-                      											<Text style={[styles.shareWithYour, styles.shareWithYourClr]}>Share with your friends and loved ones to come and play</Text>
-                    										</View>
-                  									</View>
-                  									<View style={[styles.inviteFriendsWrapper, styles.wrapperBorder]}>
-                    										<Text style={[styles.inviteFriends, styles.shareWithYourClr]}>Invite Friends</Text>
-                  									</View>
-                								</View>
-              							</View>
-		<Image style={styles.materialSymbolsshareIcon} resizeMode="cover" source={require('../assets/images/materialsymbolsshare.png')} />
-            						</View>
-            						<View style={styles.topGamersOfTheDayParent}>
-              							<Text style={[styles.topGamersOf, styles.joe1Typo]}>Top Gamers of the Day</Text>
-              							<View style={styles.joeParent}>
-                								<View style={styles.joe}>
-                  									<View style={styles.groupLayout}>
-                    										<Image style={[styles.groupItem, styles.groupLayout]} resizeMode="cover" source={require ('../assets/images/Ellipse252.png')}/>
-                    										<Image style={[styles.icon1, styles.iconLayout1]} resizeMode="cover" source={require ('../assets/images/5811.png')} />
-                  									</View>
-                  									<View style={styles.joeGroup}>
-                    										<Text style={[styles.joe1, styles.joe1Typo]}>Joe</Text>
-                    										<View style={styles.frame}>
-                      											<Text style={[styles.text9, styles.text9Layout]}>
-                        												<Text style={styles.joe1Typo}>₦</Text>
-                        												<Text style={styles.text11}>5,000</Text>
-                      											</Text>
-                    										</View>
-                  									</View>
-                								</View>
-                								<View style={styles.joe}>
-                  									<View style={styles.groupLayout}>
-                    										<Image style={[styles.groupItem, styles.groupLayout]} resizeMode="cover" source={require ('../assets/images/Ellipse2522.png')} />
-                    										<Image style={[styles.icon1, styles.iconLayout1]} resizeMode="cover" source={require ('../assets/images/291.png')}/>
-                  									</View>
-                  									<View style={styles.joeGroup}>
-                    										<Text style={[styles.joe1, styles.joe1Typo]}>Sarah</Text>
-                    										<View style={styles.frame}>
-                      											<Text style={[styles.text9, styles.text9Layout]}>
-                        												<Text style={styles.joe1Typo}>₦</Text>
-                        												<Text style={styles.text11}>5,000</Text>
-                      											</Text>
-                    										</View>
-                  									</View>
-                								</View>
-                								<View style={styles.joe}>
-                  									<View style={styles.groupLayout}>
-                    										<Image style={[styles.groupItem, styles.groupLayout]} resizeMode="cover" source={require ('../assets/images/Ellipse2523.png')} />
-                    										<Image style={[styles.icon1, styles.iconLayout1]} resizeMode="cover" source={require ('../assets/images/2929.png')}  />
-                  									</View>
-                  									<View style={styles.joeGroup}>
-                    										<Text style={[styles.joe1, styles.joe1Typo]}>Hanax</Text>
-                    										<View style={styles.frame}>
-                      											<Text style={[styles.text9, styles.text9Layout]}>
-                        												<Text style={styles.joe1Typo}>₦</Text>
-                        												<Text style={styles.text11}>5,000</Text>
-                      											</Text>
-                    										</View>
-                  									</View>
-                								</View>
-                								<View style={styles.joe}>
-                  									<View style={styles.groupLayout}>
-                    										<Image style={[styles.groupItem, styles.groupLayout]} resizeMode="cover" source={require ('../assets/images/Ellipse2524.png')} />
-                    										<Image style={[styles.icon1, styles.iconLayout1]} resizeMode="cover" source={require ('../assets/images/2913.png')} />
-                  									</View>
-                  									<View style={styles.joeGroup}>
-                    										<Text style={[styles.joe1, styles.joe1Typo]}>Inioluwa</Text>
-                    										<View style={styles.frame}>
-                      											<Text style={[styles.text9, styles.text9Layout]}>
-                        												<Text style={styles.joe1Typo}>₦</Text>
-                        												<Text style={styles.text11}>5,000</Text>
-                      											</Text>
-                    										</View>
-                  									</View>
-                								</View>
-                								<View style={styles.joe}>
-                  									<View style={styles.groupLayout}>
-                    										<Image style={[styles.groupItem, styles.groupLayout]} resizeMode="cover" source={require ('../assets/images/Ellipse2525.png')} />
-                    										<Image style={[styles.icon1, styles.iconLayout1]} resizeMode="cover" source={require ('../assets/images/2914.png')} />
-                  									</View>
-                  									<View style={styles.joeGroup}>
-                    										<Text style={[styles.joe1, styles.joe1Typo]}>Liz</Text>
-                    										<View style={styles.frame}>
-                      											<Text style={[styles.text9, styles.text9Layout]}>
-                        												<Text style={styles.joe1Typo}>₦</Text>
-                        												<Text style={styles.text11}>5,000</Text>
-                      											</Text>
-                    										</View>
-                  									</View>
-                								</View>
-                								
-              							</View>
-            						</View>
-            						<View style={[styles.component1, styles.barsPosition]}>
-		<Image style={styles.subtractIcon} resizeMode="cover" source={require('../assets/images/Subtract.png')} />
-              							<View style={styles.groupContainer}>
-				<Image style={styles.frameInner} resizeMode="cover" source={require('../assets/images/Group1000004150.png')} />
-                								<Text style={[styles.home, styles.homeTypo]}>Home</Text>
-              							</View>
-              							<View style={styles.vuesaxlinearemptyWalletParent}>
-				<Image style={styles.iconLayout} resizeMode="cover" source={require('../assets/images/emptywallet.png')} />
-                								<Text style={[styles.wallet, styles.text4Typo]}>Wallet</Text>
-              							</View>
-		<View style={[styles.streamlinestore1Parent]}>
-				<Image style={styles.streamlinestore1Icon} resizeMode="cover" source={require('../assets/images/streamlinestore1.png')}/>
-                								<Text style={[styles.wallet, styles.text4Typo]}>Store</Text>
-              							</View>
-              							<View style={styles.fluenttrophy28RegularParent}>
-				<Image style={styles.fluenttrophy28RegularIcon} resizeMode="cover" source={require('../assets/images/fluenttrophy28regular.png')} />
-                								<Text style={[styles.wallet, styles.text4Typo]}>LeaderBoard</Text>
-              							</View>
-              							<View style={styles.vuesaxlinearsetting2Parent}>
-				<Image style={styles.iconLayout2} resizeMode="cover" source={require('../assets/images/setting2.png')}/>
-                								<Text style={[styles.wallet, styles.text4Typo]}>Settings</Text>
-              							</View>
-            						</View>
-            						</View>
-                                    );
-          					};
-          					
-          			
-          					
+  );
+};
+          		
           					
 
 const styles = StyleSheet.create({
