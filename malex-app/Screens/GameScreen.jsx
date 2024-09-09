@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import axios from 'axios';
-
-
 
 const GameScreen = ({ route, navigation }) => {
   const [questions, setQuestions] = useState([]);
@@ -87,7 +85,6 @@ const GameScreen = ({ route, navigation }) => {
       alignItems: 'center'}}>
   <Text > Loading...</Text>
   </View>
-     
   }
 
   if (currentQuestionIndex >= questions.length) {
@@ -98,9 +95,7 @@ const GameScreen = ({ route, navigation }) => {
   return (
     <View style={styles.gameScreenQuestion}>
       {/* Status bar section */}
-      <View style={styles.uiBarsStatusBarsBlack}>
-      
-      </View>
+      <View style={styles.uiBarsStatusBarsBlack}></View>
 
       {/* Image Section */}
       <View style={styles.image6Parent}>
@@ -120,7 +115,7 @@ const GameScreen = ({ route, navigation }) => {
       <View style={styles.gameScreenQuestionChild} />
       <View style={styles.questionScreen}>
         <View style={[styles.question1Parent, styles.parentFlexBox]}>
-          <Text style={styles.question1}>Question {currentQuestionIndex + 1} </Text>
+          <Text style={styles.question1}>Question {currentQuestionIndex + 1}</Text>
           <Text style={[styles.whoWasThe, styles.bTypo1]}>
             {currentQuestion.question}
           </Text>
@@ -132,11 +127,30 @@ const GameScreen = ({ route, navigation }) => {
         {currentQuestion.incorrect_answers.concat(currentQuestion.correct_answer).sort().map((answer, index) => (
           <TouchableOpacity
             key={index}
-            style={[styles.correctBar, { backgroundColor: selectedAnswer === answer ? (answer === currentQuestion.correct_answer ? 'green' : 'red') : 'white' }]} // Update styles as per the answer bar
+            style={[
+              styles.correctBar,
+              {
+                backgroundColor: selectedAnswer === answer ? (answer === currentQuestion.correct_answer ? 'green' : 'red') : 'white',
+                // color : selectedAnswer === answer ? (answer === currentQuestion.correct_answer ? '#F9F9F9' 'black' ) : 'black',
+              }
+            ]}
             onPress={() => handleAnswer(answer)}
           >
             <Text style={styles.a}>{String.fromCharCode(65 + index)}.</Text>
             <Text style={styles.georgeWashington}>{answer}</Text>
+
+            {/* Conditional icon rendering */}
+            {selectedAnswer === answer && (
+              <Image
+                style={styles.answerIcon}
+                resizeMode="contain"
+                source={
+                  answer === currentQuestion.correct_answer
+                    ? require('../assets/images/correct.png')
+                    : require('../assets/images/icroundcancel.png')
+                }
+              />
+            )}
           </TouchableOpacity>
         ))}
       </View>
@@ -364,8 +378,10 @@ const styles = StyleSheet.create({
     fontFamily: "Space Grotesk",
     textAlign: "left",
     lineHeight: 20,
+   
     color: "#1b1b1b",
-    left: 80
+    left: 80,
+ 
   },
   aParent: {
     flexDirection: "row",
@@ -374,6 +390,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   correctBar: {
+    color: "#F9F9F9",
     height: 66,
     width: 370,
     backgroundColor: "#f9f9f9",
@@ -415,7 +432,8 @@ const styles = StyleSheet.create({
     gap: 20,
     left: 14,
     position: "absolute",
-    width: "90%"
+    width: "90%",
+    color: "#F9F9F9"
   },
   chooseCorrectOption: {
     top: 393,
@@ -425,6 +443,7 @@ const styles = StyleSheet.create({
     fontFamily: "SpaceGrotesk-Medium",
     fontWeight: "500",
     left: 12,
+    color: "white"
   },
   octiconstopwatch24: {
     top: 8,
@@ -472,7 +491,15 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     width: "100%",
   },
-});
+  answerIcon: {
+    position: 'absolute',
+    right: 20,
+    top: 20,
+    width: 30,
+    height: 30,
+    color: "white"
+  }
 
+});
 
 export default GameScreen;
